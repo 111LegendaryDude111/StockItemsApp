@@ -27,6 +27,10 @@ function dataValid(data) {
  
     let errors = [];
 
+    [findInputParent('title'), findInputParent('price'), findInputParent('date')].forEach(function(el) {
+        el.classList.remove('invalid');
+    });
+
     if (data.title.length <= 3) {
         let input = findInputParent('title');
  
@@ -34,13 +38,14 @@ function dataValid(data) {
 
         errors.push('title')
     }
+   
+    if (!isFloat(+data.price)) {
 
-    if (!isFloat(circumference(data.price))) {
         let input = findInputParent('price');
  
         input.classList.add('invalid');
 
-        errors.push('price')
+        errors.push('price');
     }
 
     if (data.date.length != 19) {
@@ -117,6 +122,7 @@ function addItem() {
 
         itemsList.innerHTML += htmlCards;
         closeModal();
+        modalForm.reset();
     }
  
 }

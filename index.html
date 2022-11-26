@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+    <title>Stock center</title>
+</head>
+<body>
+    <main>
+        <div class="header">
+            <div class="header__wrapper">
+                <div class="header__logo">Stock center</div>
+                <div class="header__title">Items in stock</div>
+                <div class="header_menu"><button class="btn burger"></button></div>
+            </div>
+        </div>
+
+        <div class="stock-items-container">
+            <div class="stock-items-container__head">
+                <div class="cells">
+                    <div class="cell cell--number">#</div>
+                    <div class="cell cell--title">title</div>
+                    <div class="cell cell--price">price,USD</div>
+                    <div class="cell cell--date">Date and time</div>
+                </div>
+            </div>
+            <div class="stock-items-container__context">
+                <div class="stock-items-list"></div>  
+            </div>
+            <button class="btn btn--red stock-items-container__btn">
+                New Item
+            </button>
+        </div>
+
+        <div class="modal-window">
+            <div class="modal-window__card modal-window__card--center card card--white">
+                <div class="card__header">
+                    <div class="card__wrapper">
+                        <div class="card__title">New Item</div>
+                        <button class="btn card__close"></button>
+                    </div>
+                </div>
+                <div class="card__body">
+                    <div class="card__wrapper">
+                        <form>
+                            <div class="input-group">
+                                <label for="title">Title</label>
+                                <input id="title" name="title" type="text">
+                                <span class="valid-message">title is invalid</span>
+                            </div>
+                            <div class="input-group">
+                                <label for="price">Price</label>
+                                <input id="price" name="price" type="text">
+                                <span class="valid-message">price is invalid</span>
+                            </div>
+                            <div class="input-group">
+                                <label for="date">Date and time</label>
+                                <input id="date" name="date" type="text">
+                                <span class="valid-message">date is invalid</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card__footer">
+                    <div class="card__wrapper">
+                        <button class="btn btn--black">Close</button>
+                        <button class="btn btn--red">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

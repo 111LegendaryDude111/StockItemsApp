@@ -1,0 +1,35 @@
+.btn {
+    border: none;
+    padding: 0;
+    background-color: unset;
+}
+
+.btn.btn--red {
+    color:white;
+    background-color: red;
+    padding: .5rem 2rem;
+}
+
+.btn.btn--black {
+    background-color: #919191;
+    color:white;
+}
+
+button.burger {
+    position: relative;
+    width: 1.563rem;
+    height: 1.563rem;
+}
+
+button.burger::before {
+    content: "";
+    position: absolute;
+    background-image: url('../assets/icons/burger.png');
+    background-size: contain;
+    width:70%;
+    height: 70%;
+
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}

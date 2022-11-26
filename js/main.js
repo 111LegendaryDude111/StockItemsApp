@@ -38,8 +38,8 @@ function dataValid(data) {
 
         errors.push('title')
     }
-   
-    if (!isFloat(+data.price)) {
+ 
+    if ((+data.price <= 0)) {
 
         let input = findInputParent('price');
  
